@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Melting Blueberry Tart</title>
+  <title>Hellxo</title>
   
-  
+  <subtitle>Julie’s Front-End Adventures and Portfolio</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-09-11T06:14:24.490Z</updated>
+  <updated>2024-09-12T05:42:12.913Z</updated>
   <id>http://example.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Julie Wang</name>
     
   </author>
   
@@ -21,24 +21,22 @@
     <link href="http://example.com/2024/09/11/%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/"/>
     <id>http://example.com/2024/09/11/%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/</id>
     <published>2024-09-11T05:55:05.000Z</published>
-    <updated>2024-09-11T06:14:24.490Z</updated>
+    <updated>2024-09-12T05:42:12.913Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="網路概論"><a href="#網路概論" class="headerlink" title="網路概論"></a><strong>網路概論</strong></h1><blockquote><p>[TOC]</p></blockquote><hr><h2 id="網路概論-1"><a href="#網路概論-1" class="headerlink" title="網路概論"></a><strong>網路概論</strong></h2><h3 id="電腦的運作-馮紐曼架構"><a href="#電腦的運作-馮紐曼架構" class="headerlink" title="電腦的運作-馮紐曼架構"></a>電腦的運作-馮紐曼架構</h3><ul><li>輸入(鍵盤、滑鼠 -&gt; 終端設備)</li><li>CPU<ul><li>控制器<ul><li>負責流程</li></ul></li><li>運算元</li></ul></li><li>暫存器(記憶體)</li><li>輸出</li></ul><h3 id="終端機-terminal"><a href="#終端機-terminal" class="headerlink" title="終端機 terminal"></a>終端機 terminal</h3><ul><li>負責輸入與輸出的視窗，再將資料傳給 shell</li><li>shell 殼<ul><li>windows -&gt; PowerShell<ul><li>command line 只是仿終端機</li></ul></li><li>zsh &#x2F; bash &#x2F; powershell</li><li>將指令傳給作業系統</li></ul></li><li>流程<ul><li>鍵盤(input) -&gt; terminal -&gt; shell -&gt; OS</li></ul></li></ul><h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><ul><li>ls &#x2F; dir 列出目前資料夾</li><li>ping xxx.com 檢測某位址是否在運作</li><li>cd (&#x3D;change directory) 改變位置<ul><li>可直接拖拉資料夾進來(不用自己打)</li><li>. (&#x3D;here)</li><li>..(&#x3D;上一層 parent dir)</li><li>直接按方向鍵上下可看到上次打的指令</li></ul></li><li>mkdir A 新增資料夾 A</li><li>cp A B 複製 A 命名為 B</li><li>mv A B A 改名&#x2F;移動至 B<ul><li>若 B 不存在-&gt;改名</li><li>B 存在-&gt;移動</li></ul></li><li>del A 刪除 A</li><li>pwd 顯示目前位置</li><li>cls 清除畫面<ul><li>快捷鍵 ctrl + L</li></ul></li></ul><h3 id="進位"><a href="#進位" class="headerlink" title="進位"></a>進位</h3><ul><li>2 進位 -&gt; 10 進位<ul><li>2 的位數次方相加</li></ul></li><li>10 進位 -&gt; 2 進位<ul><li>除 2 的餘數相連（由下而上）</li></ul></li><li>16 進位<ul><li>1 2 3 4 5 6 7 8 9 A B C D E F</li></ul></li></ul><h4 id="檔案權限"><a href="#檔案權限" class="headerlink" title="檔案權限"></a>檔案權限</h4><ul><li>RWX 可讀 可寫 可執行<ul><li><code>rw-</code> 代表可讀可寫不可執行</li><li>第一個字是檔案類型<ul><li>當為[ d ]則是目錄，例如上表檔名為『.config』的那一行</li><li>當為[ - ]則是檔案，例如上表檔名為『initial-setup-ks.cfg』那一行</li><li>若是[ l ]則表示為連結檔(link file)</li><li>若是[ b ]則表示為裝置檔裡面的可供儲存的周邊設備(可隨機存取裝置)</li><li>若是[ c ]則表示為裝置檔裡面的序列埠設備，例如鍵盤、滑鼠(一次性讀取裝置)</li></ul></li></ul></li><li>UGO * uer 本人 group 群 others 其他<blockquote><p>uer 本人 group 群 others 其他<br>rw- r– —<br>110 100 000<br>6 4 0<br>權限 640<br>權限 777 -&gt; 全開</p></blockquote></li><li>改權限<ul><li>chmod 600 檔案 A<ul><li>將檔案 A 改為只有自己可讀可寫</li></ul></li></ul></li></ul><h4 id="色碼-16-進位"><a href="#色碼-16-進位" class="headerlink" title="色碼(16 進位)"></a>色碼(16 進位)</h4><ul><li>R G B<blockquote><p>#E0 E0 E2<br>224, 224, 226</p></blockquote></li><li>#FFFFFF -&gt; (255, 255, 255)<ul><li>色光：白色</li></ul></li></ul><h3 id="網址的運作"><a href="#網址的運作" class="headerlink" title="網址的運作"></a>網址的運作</h3><ul><li>IP 位置<ul><li>IPv4<ul><li>最小 0.0.0.0</li><li>最大 255.255.255.255</li><li>已發完，不夠用</li></ul></li><li>IPv6<ul><li>比 IPv4 更多</li></ul></li></ul></li><li>私有（內部）網路<ul><li>一個正式 IP 透過 IP 分享器讓多個人使用，在同一個區域網路才連得上</li><li>class A: 10.0.0.0 - 10.255.255.255</li><li>class B: 172.12.0.0 - 172.31.255.255</li><li>class C: 192.168.0.0 - 192.168.255.255</li></ul></li><li>Lookback 本機<ul><li>127.0.0.1 - 127.255.255.255 特殊用途</li><li>127.0.0.1 常使用（localhost）</li></ul></li><li>Port 通訊埠<ul><li>同一 IP 位置內，範圍 0 - 65535<ul><li>0 通常保留</li><li>1 - 1023 需 root 權限</li><li>1024 - 65535 自由使用</li></ul></li><li>常用<ul><li>80 http 網站</li><li>443 https 網站</li><li>ssh 22</li></ul></li></ul></li><li>輸入網址後，瀏覽器會從網址最後向該網址機關詢問 IP 位址<ul><li>president.gov.tw<ul><li>.tw -&gt; .gov -&gt; .president</li><li>經授權的回答（問老師）</li></ul></li></ul></li><li>DNS(domain name service)<ul><li>網址翻譯</li><li><a href="https://www.gandi.net/zh-Hant">域名代理商</a></li><li>工具<ul><li>ping</li><li>nslookup +網址<ul><li>未經授權的回答較快（問旁邊同學），可能不正確</li></ul></li><li>whois +網址</li></ul></li></ul></li><li>URL<ul><li>www -&gt; host name</li><li>.google.com -&gt; domain name</li><li>&#x2F;search -&gt; path</li><li>?a&#x3D;1&amp;b-2&amp;c&#x3D;3 -&gt; QueryString<ul><li>?開頭</li><li>&amp;連接</li></ul></li></ul></li></ul><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a><strong>參考資料</strong></h2><ul><li><a href="https://edu.cdri.org.tw/xccourseapply/cont?xsmsid=0L115765309252011195&sid=0O079426093118036479">課程大綱</a></li><li>練打字</li><li>下班多學兩小時</li><li>可以把 ctrl 改到 capsLock</li><li><a href="https://www.coursera.org/learn/learning-how-to-learn">Learning How to Learn</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="電腦的運作-馮紐曼架構"><a href="#電腦的運作-馮紐曼架構" class="headerlink" title="電腦的運作-馮紐曼架構"></a>電腦的運作-馮紐曼架構</h3><ul><li>輸入(鍵盤、滑鼠 -&gt; 終端設備)</li><li>CPU<ul><li>控制器<ul><li>負責流程</li></ul></li><li>運算元</li></ul></li><li>暫存器(記憶體)</li><li>輸出</li></ul><h3 id="終端機-terminal"><a href="#終端機-terminal" class="headerlink" title="終端機 terminal"></a>終端機 terminal</h3><ul><li>負責輸入與輸出的視窗，再將資料傳給 shell</li><li>shell 殼<ul><li>windows -&gt; PowerShell<ul><li>command line 只是仿終端機</li></ul></li><li>zsh &#x2F; bash &#x2F; powershell</li><li>將指令傳給作業系統</li></ul></li><li>流程<ul><li>鍵盤(input) -&gt; terminal -&gt; shell -&gt; OS</li></ul></li></ul><h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><ul><li>ls &#x2F; dir 列出目前資料夾</li><li>ping xxx.com 檢測某位址是否在運作</li><li>cd (&#x3D;change directory) 改變位置<ul><li>可直接拖拉資料夾進來(不用自己打)</li><li>. (&#x3D;here)</li><li>..(&#x3D;上一層 parent dir)</li><li>直接按方向鍵上下可看到上次打的指令</li></ul></li><li>mkdir A 新增資料夾 A</li><li>cp A B 複製 A 命名為 B</li><li>mv A B A 改名&#x2F;移動至 B<ul><li>若 B 不存在-&gt;改名</li><li>B 存在-&gt;移動</li></ul></li><li>del A 刪除 A</li><li>pwd 顯示目前位置</li><li>cls 清除畫面<ul><li>快捷鍵 ctrl + L</li></ul></li></ul><h3 id="進位"><a href="#進位" class="headerlink" title="進位"></a>進位</h3><ul><li>2 進位 -&gt; 10 進位<ul><li>2 的位數次方相加</li></ul></li><li>10 進位 -&gt; 2 進位<ul><li>除 2 的餘數相連（由下而上）</li></ul></li><li>16 進位<ul><li>1 2 3 4 5 6 7 8 9 A B C D E F</li></ul></li></ul><h4 id="檔案權限"><a href="#檔案權限" class="headerlink" title="檔案權限"></a>檔案權限</h4><ul><li>RWX 可讀 可寫 可執行<ul><li><code>rw-</code> 代表可讀可寫不可執行</li><li>第一個字是檔案類型<ul><li>當為[ d ]則是目錄，例如上表檔名為『.config』的那一行</li><li>當為[ - ]則是檔案，例如上表檔名為『initial-setup-ks.cfg』那一行</li><li>若是[ l ]則表示為連結檔(link file)</li><li>若是[ b ]則表示為裝置檔裡面的可供儲存的周邊設備(可隨機存取裝置)</li><li>若是[ c ]則表示為裝置檔裡面的序列埠設備，例如鍵盤、滑鼠(一次性讀取裝置)</li></ul></li></ul></li><li>UGO &#x3D; uer 本人 group 群 others 其他<ul><li>uer 本人 group 群 others 其他</li><li>rw- r– —</li><li>110 100 000</li><li>6 4 0</li><li>權限 640</li><li>權限 777 -&gt; 全開</li></ul></li><li>改權限<ul><li>chmod 600 檔案 A<ul><li>將檔案 A 改為只有自己可讀可寫</li></ul></li></ul></li></ul><h4 id="色碼-16-進位"><a href="#色碼-16-進位" class="headerlink" title="色碼(16 進位)"></a>色碼(16 進位)</h4><ul><li>R G B<ul><li>#E0 E0 E2</li><li>224, 224, 226</li></ul></li><li>#FFFFFF -&gt; (255, 255, 255)<ul><li>色光：白色</li></ul></li></ul><h3 id="網址的運作"><a href="#網址的運作" class="headerlink" title="網址的運作"></a>網址的運作</h3><ul><li>IP 位置<ul><li>IPv4<ul><li>最小 0.0.0.0</li><li>最大 255.255.255.255</li><li>已發完，不夠用</li></ul></li><li>IPv6<ul><li>比 IPv4 更多</li></ul></li></ul></li><li>私有（內部）網路<ul><li>一個正式 IP 透過 IP 分享器讓多個人使用，在同一個區域網路才連得上</li><li>class A: 10.0.0.0 - 10.255.255.255</li><li>class B: 172.12.0.0 - 172.31.255.255</li><li>class C: 192.168.0.0 - 192.168.255.255</li></ul></li><li>Lookback 本機<ul><li>127.0.0.1 - 127.255.255.255 特殊用途</li><li>127.0.0.1 常使用（localhost）</li></ul></li><li>Port 通訊埠<ul><li>同一 IP 位置內，範圍 0 - 65535<ul><li>0 通常保留</li><li>1 - 1023 需 root 權限</li><li>1024 - 65535 自由使用</li></ul></li><li>常用<ul><li>80 http 網站</li><li>443 https 網站</li><li>ssh 22</li></ul></li></ul></li><li>輸入網址後，瀏覽器會從網址最後向該網址機關詢問 IP 位址<ul><li>president.gov.tw<ul><li>.tw -&gt; .gov -&gt; .president</li><li>經授權的回答（問老師）</li></ul></li></ul></li><li>DNS(domain name service)<ul><li>網址翻譯</li><li><a href="https://www.gandi.net/zh-Hant">域名代理商</a></li><li>工具<ul><li>ping</li><li>nslookup +網址<ul><li>未經授權的回答較快（問旁邊同學），可能不正確</li></ul></li><li>whois +網址</li></ul></li></ul></li><li>URL<ul><li>www -&gt; host name</li><li>.google.com -&gt; domain name</li><li>&#x2F;search -&gt; path</li><li>?a&#x3D;1&amp;b-2&amp;c&#x3D;3 -&gt; QueryString<ul><li>?開頭</li><li>&amp;連接</li></ul></li></ul></li></ul><h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a><strong>參考資料</strong></h2><ul><li><a href="https://edu.cdri.org.tw/xccourseapply/cont?xsmsid=0L115765309252011195&sid=0O079426093118036479">課程大綱</a></li><li>練打字</li><li>下班多學兩小時</li><li>可以把 ctrl 改到 capsLock</li><li><a href="https://www.coursera.org/learn/learning-how-to-learn">Learning How to Learn</a></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;網路概論&quot;&gt;&lt;a href=&quot;#網路概論&quot; class=&quot;headerlink&quot; title=&quot;網路概論&quot;&gt;&lt;/a&gt;&lt;strong&gt;網路概論&lt;/strong&gt;&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;h3 id=&quot;電腦的運作-馮紐曼架構&quot;&gt;&lt;a href=&quot;#電腦的運作-馮紐曼架構&quot; class=&quot;headerlink&quot; title=&quot;電腦的運作-馮紐曼架構&quot;&gt;&lt;/a&gt;電腦的運作-馮紐曼架構&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;輸入(鍵盤、滑鼠 -&amp;gt; 終端設備)&lt;/li&gt;
+&lt;l</summary>
       
     
     
     
     
-    <category term="網路概論, 前端班" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96-%E5%89%8D%E7%AB%AF%E7%8F%AD/"/>
+    <category term="網路概論" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/"/>
     
   </entry>
   
