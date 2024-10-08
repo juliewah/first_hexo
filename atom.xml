@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hellxo</title>
+  <title>Julie&#39;s Blog</title>
   
-  <subtitle>Julie’s Front-End Adventures and Portfolio</subtitle>
+  <subtitle>Web Development, cats and birds</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
@@ -10,7 +10,7 @@
   <id>http://example.com/</id>
   
   <author>
-    <name>Julie Wang</name>
+    <name>Julie</name>
     
   </author>
   
