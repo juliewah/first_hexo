@@ -1,0 +1,170 @@
+<!DOCTYPE html><html class="appearance-dark" lang="zh-tw"><head><meta charset="UTF-8"><title>RWD 與 Bootstrap 入門</title><meta name="description" content="Julie's Blog"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="
+負責人：王婕瑜授課時間：2020-04-09 (四)
+
+RWD 基本概念
+全名為：Responsive web design，響應式設計
+主要目的是使網頁在各種尺寸的裝置上，可以呈現合適比例的原則。讓內容跟水一樣，在不同的容器（裝置）中流動，顯示最適合的模樣圖片來源
+舉個例子，在這個網站裡，隨著螢幕寬度變小，它的 header 變為漢堡選單，文字自動換行，中央區塊的內容從橫向排列變為縱向排列，我們就可以說這個網站符合 RWD 的設計原則。要做到這樣的效果，需要 CSS 提供的 Media Queries 功能和 viewport 的設定。
+總結 RWD 設計的特點：
+彈性的圖片（依照螢幕大小比例伸縮）
+流動的區塊（文字隨著螢幕大小換行）
+多種版面（不同尺寸的裝置相對應的呈現方式）
+
+
+
+為什麼要用 RWD.."><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Julie's Blog" type="application/atom+xml">
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Julie's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">RWD 與 Bootstrap 入門</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">返回頂部</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">首頁</a></h3><h3 class="is-inline-block"><a href="/about">關於</a></h3><h3 class="is-inline-block"><a href="/archives">所有檔案</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">首頁</a></h3><h3 class="is-inline-block"><a href="/about">關於</a></h3><h3 class="is-inline-block"><a href="/archives">所有檔案</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RWD-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">RWD 基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E7%94%A8-RWD%EF%BC%9F"><span class="toc-text">為什麼要用 RWD？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RWD-%E5%AF%A6%E4%BD%9C"><span class="toc-text">RWD 實作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RWD-%E5%AF%A6%E4%BD%9C%E6%96%B9%E6%B3%95"><span class="toc-text">RWD 實作方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LAB-01-Media-Queries-%E7%B7%B4%E7%BF%92"><span class="toc-text">LAB-01 Media Queries 練習</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LAB-02-%E5%AF%AB%E4%B8%80%E5%80%8B%E7%AC%A6%E5%90%88-RWD-%E5%8E%9F%E5%89%87%E7%9A%84%E7%B6%B2%E9%A0%81"><span class="toc-text">LAB-02 寫一個符合 RWD 原則的網頁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bootstrap"><span class="toc-text">Bootstrap</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bootstrap-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">Bootstrap 基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E4%BD%BF%E7%94%A8-Bootstrap%EF%BC%9F"><span class="toc-text">為什麼要使用 Bootstrap？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%96%8B%E5%A7%8B%E4%BD%BF%E7%94%A8-Bootstrap"><span class="toc-text">開始使用 Bootstrap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Grid-System-%E7%B6%B2%E6%A0%BC%E7%B3%BB%E7%B5%B1"><span class="toc-text">Grid System 網格系統</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%AB%E6%B3%95"><span class="toc-text">寫法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LAB-03-%E5%B0%87%E7%B6%B2%E9%A0%81%E6%94%B9%E7%82%BA%E4%BD%BF%E7%94%A8-Bootstrap"><span class="toc-text">LAB-03 將網頁改為使用 Bootstrap</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%BA%90"><span class="toc-text">參考資源</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/%E5%89%8D%E7%AB%AF"><i class="tag post-item-tag">前端</i></a><a href="/tags/RWD"><i class="tag post-item-tag">RWD</i></a><a href="/tags/Bootstrap"><i class="tag post-item-tag">Bootstrap</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">RWD 與 Bootstrap 入門</h1><time class="has-text-grey" datetime="2024-12-20T08:22:01.000Z">2024-12-20</time><article class="mt-2 post-content"><blockquote>
+<p>負責人：王婕瑜<br>授課時間：2020-04-09 (四)</p>
+</blockquote>
+<h1 id="RWD-基本概念"><a href="#RWD-基本概念" class="headerlink" title="RWD 基本概念"></a>RWD 基本概念</h1><ul>
+<li>全名為：Responsive web design，響應式設計</li>
+<li>主要目的是使網頁在各種尺寸的裝置上，可以呈現<strong>合適比例</strong>的原則。讓內容跟水一樣，在不同的容器（裝置）中流動，顯示最適合的模樣<br><img src="https://i.imgur.com/pMO4mDW.jpg"><a target="_blank" rel="noopener" href="https://medium.com/@oristatlender/responsive-website-retrospective-105ccc3b1bb8">圖片來源</a></li>
+<li>舉個<a target="_blank" rel="noopener" href="https://www.azul.com/">例子</a>，在這個網站裡，隨著螢幕寬度變小，它的 header 變為漢堡選單，文字自動換行，中央區塊的內容從橫向排列變為縱向排列，我們就可以說這個網站符合 RWD 的設計原則。要做到這樣的效果，需要 CSS 提供的 <strong>Media Queries</strong> 功能和 <strong>viewport</strong> 的設定。</li>
+<li>總結 RWD 設計的特點：<ul>
+<li>彈性的圖片（依照螢幕大小比例伸縮）</li>
+<li>流動的區塊（文字隨著螢幕大小換行）</li>
+<li>多種版面（不同尺寸的裝置相對應的呈現方式）</li>
+</ul>
+</li>
+</ul>
+<h2 id="為什麼要用-RWD？"><a href="#為什麼要用-RWD？" class="headerlink" title="為什麼要用 RWD？"></a>為什麼要用 RWD？</h2><ul>
+<li>行動網路取得越來越方便，使用者開始用各種形式的裝置上網，例如：手機、電腦、平板。而許多網站為了因應這樣的趨勢，另外開發手機 APP 、行動版網站等等，這樣一來，就多出了許多維護成本，而使用 CSS 功能控制版面的方式，就能<strong>減少開發成本</strong>。</li>
+<li>建立行動版網站的目的是讓使用者可以更快速的找到資料，但許多行動版網站為了節省流量，刪減了部分內容，或更改原有的功能列，讓使用者不得不切回電腦版。如果網站根據 RWD 原則設計，就能提供更<strong>舒適的瀏覽體驗</strong>。</li>
+</ul>
+<h2 id="RWD-實作"><a href="#RWD-實作" class="headerlink" title="RWD 實作"></a>RWD 實作</h2><ul>
+<li>為了實現這個原則，需要 HTML、CSS 和 JavaScript 等技術，可以全用 CSS ，也可以使用 Bootstrap 框架，加速開發效率。</li>
+</ul>
+<h3 id="RWD-實作方法"><a href="#RWD-實作方法" class="headerlink" title="RWD 實作方法"></a>RWD 實作方法</h3><ul>
+<li><p>設定 Viewport<br>設定手機網頁的螢幕解析度<br>_ Viewport：檢視區，瀏覽網頁時瀏覽器顯示畫面的區域<br>_ 由於智慧型手機的螢幕較小，照原本網頁的寬度上顯示的文字在手機上來看太小了，所以調整手機瀏覽器的螢幕解析度，才能讓使用者得到較舒適的閱讀狀態。<br>&#96;&#x3D;html</p>
+  <!--<head>-->
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <!--表示我們現在要設置的是 viewport，使目前網站自動符合裝置自己的預設最佳解析度，設定螢幕畫面的初始縮放比例為 100%-->
+  `
+![](https://i.imgur.com/KmT0Z40.png)
+</li>
+<li><p>圖片設定</p>
+<ul>
+<li>在設定圖片大小時，如果使用絕對寬度，在不同的裝置上就可能超出可以瀏覽的範圍，若調整為相對寬度的值，就可以正常地顯示內容</li>
+<li>把原本的 px 換成 %，達到依畫面尺寸縮放的功能</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--CSS--&gt;</span><br><span class="line">img &#123;</span><br><span class="line">width:100%;</span><br><span class="line">height:auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>決定 RWD 設計模式</p>
+<ul>
+<li>決定內容在不同 Viewport 下如何流動</li>
+<li>舉個例子：主體為流動 (mostly fluid)<br>_ 內容被垂直堆疊於最小檢視中<br>_ 螢幕超出 600px 時，主要與次要內容佔據整個螢幕寬度。<br>_ 超過 800px 時，三個區塊都會顯示，使用完整螢幕寬度。<br><img src="https://i.imgur.com/My4HACX.png"><br>_ 更多設計模式可以參考 <a target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns?hl=zh-tw">回應式網頁設計模式</a></li>
+</ul>
+</li>
+<li><p>套用 CSS Media Queries<br>透過媒體查詢功能，我們可以得知用戶裝置的相關資訊，就可以進一步針對裝置套用合適的 CSS。</p>
+<ul>
+<li><p>可以查詢的資訊</p>
+<ul>
+<li><strong>width：視區寬度</strong>：真正代表目前瀏覽器渲染的範圍</li>
+<li>height：視區高度</li>
+<li>device-width：裝置寬度</li>
+<li>device-height：裝置高度</li>
+<li>orientation：裝置寬高比</li>
+<li>aspect-ratio：視區寬高比</li>
+</ul>
+</li>
+<li><p>裝置類型</p>
+<ul>
+<li>all：所有裝置</li>
+<li>print：印表機列印輸出</li>
+<li><strong>screen：一般電腦螢幕</strong></li>
+<li>speech：朗讀式裝置</li>
+</ul>
+</li>
+<li><p>條件語法</p>
+<ul>
+<li>only 表示指定特定單一條件</li>
+<li>and 表示多個條件都必須符合</li>
+<li>not 表示不要某一個條件</li>
+<li>舉個例子：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--.pic 原寬度爲 300px，當我的裝置是螢幕且寬度至少有 900px 時，也就是大於等於 900px 時，.pic寬度變更爲 500px--&gt;</span><br><span class="line">.pic&#123;</span><br><span class="line">width: 300px;</span><br><span class="line">&#125;</span><br><span class="line">@media screen and (min-width:900px) &#123;</span><br><span class="line">  .pic&#123;</span><br><span class="line">    width: 500px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>設定版面流動方式</p>
+<ul>
+<li>舉個例子：主體為流動 (mostly fluid)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@media (min-width: 600px) &#123;</span><br><span class="line">.c2, .c3, .c4, .c5 &#123;</span><br><span class="line">width: 50%;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media (min-width: 800px) &#123;</span><br><span class="line">  .c1 &#123;</span><br><span class="line">    width: 60%;</span><br><span class="line">  &#125;</span><br><span class="line">  .c2 &#123;</span><br><span class="line">    width: 40%;</span><br><span class="line">  &#125;</span><br><span class="line">  .c3, .c4 &#123;</span><br><span class="line">    width: 33%;</span><br><span class="line">  &#125;</span><br><span class="line">  .c5 &#123;</span><br><span class="line">    width: 34%;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="LAB-01-Media-Queries-練習"><a href="#LAB-01-Media-Queries-練習" class="headerlink" title="LAB-01 Media Queries 練習"></a>LAB-01 Media Queries 練習</h3><ul>
+<li>在網頁中顯示一盒子，隨著寬度拉大至 500px 時，盒子寬度變寬至 500px 並且變爲綠色，寬度繼續拉大至 1000px 時，盒子寬度變寬至 1000px 並且變爲藍色。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!--HTML--&gt;</span><br><span class="line"> &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line"> &lt;!--CSS--&gt;</span><br><span class="line"> .box&#123;</span><br><span class="line"> width: 300px;</span><br><span class="line"> height: 100px;</span><br><span class="line"> background-color: pink;</span><br><span class="line">&#125;</span><br><span class="line">@media screen and (min-width:500px)&#123;</span><br><span class="line"> .box&#123;</span><br><span class="line">   width: 500px;</span><br><span class="line">   background-color: green;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">@media screen and (min-width:1000px)&#123;</span><br><span class="line"> .box&#123;</span><br><span class="line">   width: 1000px;</span><br><span class="line">   background-color: blue;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="LAB-02-寫一個符合-RWD-原則的網頁"><a href="#LAB-02-寫一個符合-RWD-原則的網頁" class="headerlink" title="LAB-02 寫一個符合 RWD 原則的網頁"></a>LAB-02 寫一個符合 RWD 原則的網頁</h3><ul>
+<li>網頁內容須包含：<ul>
+<li>會隨著螢幕尺寸改變大小的圖片</li>
+<li>依喜好選擇一種版面流動方式，應用在網頁裡<br>可以參考 <a target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns?hl=zh-tw">回應式網頁設計模式</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2><h3 id="Bootstrap-基本概念"><a href="#Bootstrap-基本概念" class="headerlink" title="Bootstrap 基本概念"></a>Bootstrap 基本概念</h3><ul>
+<li>一種前端框架，讓網站設計人員可以依據這些既有的樣式進行設計，方便及快速的製作出網站</li>
+<li>提供建立 RWD 網站的功能<blockquote>
+<p>What is Responsive Web Design?<br>Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.</p>
+<p>一個會自動調整、在所有類型的裝置上瀏覽都好看的網站。</p>
+</blockquote>
+</li>
+<li>Bootstrap 3 vs Bootstrap 4<ul>
+<li>BS4 是最新的版本，速度較快，允許的樣式資料多一些</li>
+<li>BS4 並不支援 IE8 以及 IE9，若有考慮給使用上述兩種瀏覽器的使用者，使用 BS3 即可</li>
+</ul>
+</li>
+</ul>
+<h3 id="為什麼要使用-Bootstrap？"><a href="#為什麼要使用-Bootstrap？" class="headerlink" title="為什麼要使用 Bootstrap？"></a><em>為什麼要使用 Bootstrap？</em></h3><ul>
+<li>簡單：只需具備基本 html 與 css 知識者即可使用</li>
+<li>響應式：適用於手機、平板、桌上型電腦</li>
+<li>行動優先（mobile-first）<br>針對不同型態的使用者，網站應依照目標客群所使用的裝置考慮網頁的呈現方式，<strong>客製化</strong>每一種尺寸的螢幕應有的功能，行動優先比較像以智慧型手機等行動裝置設計，呈現出<strong>核心功能</strong>，而非單純顯示另一種版面的電腦版網站<br><img src="https://i.imgur.com/WxnUcwS.jpg"><br><a target="_blank" rel="noopener" href="https://www.ctkpro.com/blog/mobile-first-versus-rwd/">圖片來源</a></li>
+<li>網頁兼容性：適用於各類型的瀏覽器（如：Chrome, Firefox, Internet Explorer 10+, Edge, Safari, and Opera）</font></li>
+</ul>
+<h3 id="開始使用-Bootstrap"><a href="#開始使用-Bootstrap" class="headerlink" title="開始使用 Bootstrap"></a>開始使用 Bootstrap</h3><ul>
+<li>載入官方網站提供的 CSS 檔案<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--放在head標籤裡--&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot;　href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&quot; crossorigin=&quot;anonymous&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li>許多組件需要使用 JavaScript 才能運行，這些組件在文件中都查得到<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--&lt;/body&gt;結尾標籤前，在頁面末尾放置--&gt;</span><br><span class="line">&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js&quot; integrity=&quot;sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+<li>用 lang 屬性設定語言，它是 html 標籤的一個屬性，用於設定頁面上所有文字的語言。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=&quot;zh-TW&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li>lang 屬性可用於任何 HTML 元素<br>如果在網頁中某個區塊想要另外標示為其他語言，那麼就可以直接寫在那個元素上，例如：<br><code>&lt;p lang=&quot;fr&quot;&gt;Je suis français&lt;/p&gt;</code></li>
+<li>想寫什麼樣式，在<a target="_blank" rel="noopener" href="https://bootstrap.hexschool.com/docs/4.1/getting-started/introduction/">文件</a>中就可以找到寫好的樣式，顏色、邊框、間隔這些會放在通用裡，按鈕、下拉選單、導航欄等等在元件裡</li>
+</ul>
+<h3 id="Grid-System-網格系統"><a href="#Grid-System-網格系統" class="headerlink" title="Grid System 網格系統"></a>Grid System 網格系統</h3><ul>
+<li>為了方便網頁設計師設計自己的網站欄位規劃， bootstrap 4 提供了一個網格系統</li>
+<li>由 Row（列）與 Column（行）來建立頁面架構的，內容則裝在他們組成的框框內</li>
+<li>隨著螢幕尺寸或 viewpoint 的增加，最多分成 12 行<br><img src="https://i.imgur.com/ke5KTAV.gif"><br><a target="_blank" rel="noopener" href="https://www.pinterest.co.uk/pin/71213237842873183/">圖片來源</a></li>
+</ul>
+<h4 id="寫法"><a href="#寫法" class="headerlink" title="寫法"></a>寫法</h4><ul>
+<li>基本架構如下</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-*-*&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;row&quot;&gt;...&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;container&quot;&gt;....&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>關鍵是<code>class=&quot;row&quot;</code>，只有在該類別底下時，所有的 col-*- 的類別設定才會生效</li>
+<li>依照不同裝置尺寸，設定網格顯示的比例<br><img src="https://i.imgur.com/ly1SF9r.png"><ul>
+<li>手機設備：xs</li>
+<li>平板設備：sm</li>
+<li>電腦版：md</li>
+<li>電腦版桌面（大型）：lg</li>
+</ul>
+</li>
+<li>格式是：.col-尺寸-占了幾格，例如：<br><code>.col-md-6</code>　大於 720px，呈現兩欄<br><code>.col-lg-4</code>　大於 960px，呈現三欄<br><code>.col-xl-3</code>　大於 1140px，呈現四欄</li>
+</ul>
+<h3 id="LAB-03-將網頁改為使用-Bootstrap"><a href="#LAB-03-將網頁改為使用-Bootstrap" class="headerlink" title="LAB-03 將網頁改為使用 Bootstrap"></a>LAB-03 將網頁改為使用 Bootstrap</h3><ul>
+<li>將使用到 Media Queries 的地方改為 Grid System 的寫法</li>
+<li>依照<a target="_blank" rel="noopener" href="https://bootstrap.hexschool.com/docs/4.1/getting-started/introduction/">官方文件</a>加上任一 Bootstrap 元件</li>
+</ul>
+<h1 id="參考資源"><a href="#參考資源" class="headerlink" title="參考資源"></a><strong>參考資源</strong></h1><blockquote>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://tw.alphacamp.co/blog/rwd-responsive-web-design-introduction">RWD 教學入門：響應式網頁設計的實作方法｜ ALPHA Camp Blog</a></li>
+<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10203671">Day6 如何做出響應式網頁(RWD)？ - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.flycan.com/article/rwd/meta-veiwport-1316.html">使用 Veiwport 設定手機網頁的螢幕解析度 【飛肯設計學苑】教學範例區</a></li>
+<li><a target="_blank" rel="noopener" href="http://dic.vbird.tw/webdesign/main2017/unit10.php">第 10 堂課 - 初探 bootstrap 網頁製作</a></li>
+<li><a target="_blank" rel="noopener" href="https://bootstrap.hexschool.com/docs/4.1/getting-started/introduction/">簡介 (Introduction) · Bootstrap 4 繁體中文手冊</a></li>
+<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10185833">[day12]-好的網站和好的建築一樣，先打造好地基！-格線系統（Grid System）篇</a></li>
+<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10194236">Day09：小事之 HTML lang Attribute - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天</a></li>
+</ol>
+</blockquote>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><em></em><a class="button is-default" href="/2024/12/20/UI%E5%85%A5%E9%96%80-Figma%E7%AD%86%E8%A8%98/" title="UI入門 - Figma筆記"><span class="has-text-weight-semibold">下一頁: UI入門 - Figma筆記</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="juliewah/juliewah.github.io" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/juliewah"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/julie.wang.3344"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Julie 2024</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>

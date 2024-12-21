@@ -1,0 +1,147 @@
+<!DOCTYPE html><html class="appearance-dark" lang="zh-tw"><head><meta charset="UTF-8"><title>CSS 選擇器</title><meta name="description" content="Julie's Blog"><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1"><!-- Google Analytics --><!-- End Google Analytics -->
+<!-- Baidu Analytics --><!-- End Baidu Analytics --><link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="/style/common/bulma.css"><link rel="stylesheet" href="/style/base.css"><link rel="stylesheet" href="/style/common/helper.css"><script src="/js/common.js"></script><link rel="stylesheet" href="/style/post.css"><link rel="stylesheet" href="/style/themes/highlight-theme-light.css"><link rel="stylesheet" href="/style/common/jquery.fancybox.min.css"><script src="/js/highlight.pack.js"></script><meta name="description" content="同輩
+
+
+Syntax
+Mean
+Selector
+
+
+
+A, B
+A 跟 B
+h1, h2
+
+
+A + B
+緊接 A 後面的 B
+h1 + p
+
+
+A ~ B
+A 後面的所有 B
+h1 ~ p
+
+
+父子
+
+
+Syntax
+Mean
+Selector
+
+
+
+A a
+A 裡的所有 a(含子層&amp;#x2F;子子層…)
+p span
+
+
+A &amp;gt; a
+A 下一子層裡的 a(不含子子層)
+article&amp;gt;h2
+
+
+偽類
+如果同時定義&amp;lt;a&amp;gt;的四種偽類，一般狀況應依此順序指定a:link→a:visited→a:hover→a:active，不然會有樣式覆蓋的問題（除非特殊設計考量）
+
+
+
+
+Syntax
+Mean
+Selector
+
+
+
+:hover
+游標移到時
+a:hover
+
+
+:active.."><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Julie's Blog" type="application/atom+xml">
+</head><body class="is-flex is-flex-direction-column"><header class="header-widget is-flex-shrink-0 is-hidden-mobile"><div class="container is-fullhd is-flex is-justify-content-space-between is-align-items-center is-full-height"><section class="is-hidden-mobile is-flex-shrink-0"><h2><a href="/">Julie's blog</a></h2></section><h3 class="is-hidden-mobile is-family-serif is-full-height is-flex is-align-items-center is-flex-shrink-0"><div class="is-full-height" id="postTopic"><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">CSS 選擇器</p><p class="is-full-height is-flex-shrink-0 is-flex is-align-items-center is-justify-content-center">返回頂部</p></div></h3><aside class="is-flex-shrink-0"><h3 class="is-inline-block"><a href="/">首頁</a></h3><h3 class="is-inline-block"><a href="/about">關於</a></h3><h3 class="is-inline-block"><a href="/archives">所有檔案</a></h3></aside></div></header><header class="is-flex header-widget is-flex-shrink-0 is-align-items-center is-justify-content-center is-hidden-tablet"><h3 class="is-inline-block"><a href="/">首頁</a></h3><h3 class="is-inline-block"><a href="/about">關於</a></h3><h3 class="is-inline-block"><a href="/archives">所有檔案</a></h3></header><main><main class="container is-max-widescreen content section post-page pt-4 px-4"><div class="columns is-flex-desktop is-justify-content-center is-flex-direction-row-reverse"><div class="column is-3 is-hidden-mobile"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E8%BC%A9"><span class="toc-text">同輩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%B6%E5%AD%90"><span class="toc-text">父子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%BD%E9%A1%9E"><span class="toc-text">偽類</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%BD%E5%85%83%E7%B4%A0"><span class="toc-text">偽元素</span></a></li></ol></div><div class="column is-9"><header class="my-4"><a href="/tags/CSS"><i class="tag post-item-tag">CSS</i></a><a href="/tags/%E5%89%8D%E7%AB%AF"><i class="tag post-item-tag">前端</i></a></header><h1 class="mt-0 mb-1 is-family-serif" id="postTitle">CSS 選擇器</h1><time class="has-text-grey" datetime="2024-12-20T07:58:10.000Z">2024-12-20</time><article class="mt-2 post-content"><h2 id="同輩"><a href="#同輩" class="headerlink" title="同輩"></a>同輩</h2><table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Mean</th>
+<th>Selector</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A, B</td>
+<td>A 跟 B</td>
+<td>h1, h2</td>
+</tr>
+<tr>
+<td>A + B</td>
+<td>緊接 A 後面的 B</td>
+<td>h1 + p</td>
+</tr>
+<tr>
+<td>A ~ B</td>
+<td>A 後面的所有 B</td>
+<td>h1 ~ p</td>
+</tr>
+</tbody></table>
+<h2 id="父子"><a href="#父子" class="headerlink" title="父子"></a>父子</h2><table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Mean</th>
+<th>Selector</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A a</td>
+<td>A 裡的所有 a(含子層&#x2F;子子層…)</td>
+<td>p span</td>
+</tr>
+<tr>
+<td>A &gt; a</td>
+<td>A 下一子層裡的 a(不含子子層)</td>
+<td>article&gt;h2</td>
+</tr>
+</tbody></table>
+<h2 id="偽類"><a href="#偽類" class="headerlink" title="偽類"></a>偽類</h2><ul>
+<li>如果同時定義<code>&lt;a&gt;</code>的四種偽類，一般狀況應依此順序指定<br>a:link→a:visited→a:hover→a:active，不然會有樣式覆蓋的問題（除非特殊設計考量）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Mean</th>
+<th>Selector</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:hover</td>
+<td>游標移到時</td>
+<td>a:hover</td>
+</tr>
+<tr>
+<td>:active</td>
+<td>點擊當下(按下去到放開間)</td>
+<td>a:active</td>
+</tr>
+</tbody></table>
+<h2 id="偽元素"><a href="#偽元素" class="headerlink" title="偽元素"></a>偽元素</h2><table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Mean</th>
+<th>Selector</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>::before</td>
+<td>在原 Element 的後面增加另一個 Element</td>
+<td>a:before</td>
+</tr>
+<tr>
+<td>::after</td>
+<td>在原 Element 的前面增加另一個 Element</td>
+<td>a:after</td>
+</tr>
+</tbody></table>
+</article><section class="jump-container is-flex is-justify-content-space-between my-6"><!-- em is empty placeholder--><a class="button is-default" href="/2024/12/20/CSS-%E5%AE%9A%E4%BD%8D%E5%A4%A7%E5%85%A8-float-%E8%88%87-position/" title="CSS 定位大全- float 與 position"><i class="iconfont icon-prev mr-2 has-text-grey"></i><span class="has-text-weight-semibold">上一頁: CSS 定位大全- float 與 position</span></a><a class="button is-default" href="/2024/09/11/%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/" title="網路概論"><span class="has-text-weight-semibold">下一頁: 網路概論</span><i class="iconfont icon-next ml-2 has-text-grey"></i></a></section><article class="mt-6 comment-container"><script async repo="juliewah/juliewah.github.io" src="https://utteranc.es/client.js" issue-term="pathname" theme="preferred-color-scheme"></script></article></div></div></main></main><footer class="is-flex is-flex-direction-column is-align-items-center is-flex-shrink-0 is-family-serif"><section class="sns-container"><a title="twitter" target="_blank" rel="noopener nofollow" href="//twitter.com//"><i class="iconfont icon-twitter"></i></a><!-- Github--><a title="github" target="_blank" rel="noopener nofollow" href="//github.com/juliewah"><i class="iconfont icon-github"></i></a><!-- Ins--><a title="instagram" target="_blank" rel="noopener nofollow" href="//www.instagram.com//"><i class="iconfont icon-ins"></i></a><!-- RSS--><!-- 知乎--><!-- 领英--><!-- 脸书--><a title="facebook" target="_blank" rel="noopener nofollow" href="//www.facebook.com/julie.wang.3344"><i class="iconfont icon-tian7_facebook"></i></a></section><p><span>Copyright ©</span><span> Julie 2024</span></p><div class="is-flex is-justify-content-center is-flex-wrap-wrap"><p>Powered by Hexo &verbar;&nbsp;</p><p class="is-flex is-justify-content-center"><a title="Hexo theme author" target="_blank" rel="noopener" href="//github.com/haojen">Theme by Haojen&nbsp;</a></p><div style="margin-top: 2px"><a class="github-button" title="github-button" target="_blank" rel="noopener" href="https://github.com/haojen/hexo-theme-Claudia" data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="true"></a></div></div><div><span></span></div></footer><script async defer src="https://buttons.github.io/buttons.js"></script><script src="/js/jquery-3.6.1.min.js"></script><script src="/js/jquery-fancybox.min.js"></script><script src="/js/img_zoom.js"></script><script src="/js/post.js"></script></body></html>
