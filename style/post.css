@@ -38,6 +38,7 @@
 .post-page .post-content pre {
   padding: 0;
   background: transparent;
+  text-align: left;
 }
 .post-page .post-content pre code {
   padding: 15px;
@@ -95,4 +96,4 @@
 .post-page :target {
   padding-top: 60px;
   margin-top: -60px !important;
-}
+} /*# sourceMappingURL=post.css.map */
